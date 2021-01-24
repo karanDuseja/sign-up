@@ -38,14 +38,15 @@ app.post("/",function(req,res){
 
   const jsonData= JSON.stringify(data);
   const url = "https://us7.api.mailchimp.com/3.0/lists/c02b4478e8";
+
   const options= {
-    method:"POST",
-    auth:"karan59193:86c04cdf527ff192bbf44d79d247d0d8-us7",
+    method: "POST",
+    auth: "karan59193:86c04cdf527ff192bbf44d79d247d0d8-us7"
   }
 
 
 
-  const request= https.request(url, function(response){
+  const request= https.request(url, options, function(response){
 
     if (response.statusCode === 200) {
       res.sendFile(__dirname+"/success.html");
@@ -64,11 +65,11 @@ app.post("/",function(req,res){
 });
 
 app.post("/failure",function(req,res){
-  res.redirect("/")
-})
+  res.redirect("/");
+});
 
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("server on 3000");
 
 });
