@@ -41,7 +41,7 @@ app.post("/",function(req,res){
 
   const options= {
     method: "POST",
-    auth: "karan59193:86c04cdf527ff192bbf44d79d247d0d8-us7"
+    auth: "id:api-key"
   }
 
 
@@ -75,7 +75,6 @@ app.listen(process.env.PORT || 3000, function(){
 });
 
 //apikey
-//845cd9d79f051dae200e77d3f22f48ef-us7  845cd9d79f051dae200e77d3f22f48ef-us7 86c04cdf527ff192bbf44d79d247d0d8-us7
 
 //listid
-// c02b4478e8
+// 
